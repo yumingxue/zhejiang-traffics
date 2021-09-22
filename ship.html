@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+
+<head>
+<meta charset="UTF-8">
+<title>日新月异——渡船</title>
+	<script src="js/knowledge1.js"></script>
+    <script src="js/knowledge2.js"></script>
+	<script src="js/secretnav.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/secretnav.css" />
+	<link rel="stylesheet" type="text/css" href="css/ship.css" />
+</head>
+<body>
+	<div id="content">
+		<p><a href="#" id="cd" class="open" title="点击打开菜单!">[菜单]</a><a href="index.html" id="fh">[首页]</a></p>
+        <div id="knowladge">
+        <h1>浙江渡轮变化</h1>
+<h2>&emsp;&emsp;浙江多江河湖泊，在交通不便的过去，一些地区的百姓出行离不开渡船。几十年间，从最初的木质船，到八九十年代的钢质船，再到如今的双向通行车客渡，时代在变迁，渡运也在发生变化。</h2>
+<img src="images/小木船.jpg" id="xmc">
+<img src="images/旧船.jpg" id="jc">
+<img src="images/客船.jpg" id="dc">
+</br>
+</br>
+</br>
+<div id="zuiz">
+<img src="images/世界最早独木舟.jpg">
+<p>世界最早独木舟</p>
+</div>
+        <h1>世界最早独木舟</h1>
+<h2>&emsp;&emsp;杭州靠山面水，湖泊星罗棋布、河道纵横交错。杭州居民依赖舟船进行交通运输和生产生活的历史可以追溯到七八千年前的跨湖桥文化时期。据考古发掘，2002年跨湖桥遗址出土的独木舟，经测定，距今8000－7000年，是迄今发现世界上最早的独木舟。</h2>
+</br>
+</br>
+</br>
+</br>
+<div id="ssbs">
+<img src="images/水上巴士.jpg">
+<p>水上巴士</p>
+</div>
+         <h1>水上巴士</h1>
+<h2>&emsp;&emsp;2004年10月28日,杭州市民期盼已久的运河“水上巴士”正式开通，并在信义坊举行首航仪式。杭州是全国首个市区运河干道开通水上公共交通巴士的城市。先期投入运营的水上巴士有两艘，分别为“钱江号”和“运河号”。船长23米，48个客位，设计最高时速可达29公里，水域通航里程5.5公里。“水上巴士”的开通将在一定程度上缓解市区道路的交通压力。</h2>
+        </div>
+	</div>
+	<nav id="nav">
+		<a href="airplane.html">飞机</a>
+		<a href="ship.html">渡船</a>
+		<a href="train.html">高铁</a>
+		<a href="car.html">汽车</a>
+		<a href="subway.html">地铁</a>
+	</nav>
+	
+	<script>
+		$(function() {
+			$('#content').secretNav({
+				navSelector: '#nav',
+				openSelector: '.open',
+				position: 'left'
+			});
+		});
+	</script>
+</body>
+</html>

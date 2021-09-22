@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<head>
+<meta charset="UTF-8">
+<title>浙江交通百年发展脉络——温故知新</title>
+	<link rel="stylesheet" type="text/css" href="css/test.menu.css" />
+	<script type="text/javascript" src="js/wheelmenu1.js"></script>
+	<script type="text/javascript" src="js/wheelmenu2.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/test.next.css" />
+	<script src="js/test.next.js"></script>
+<style type="text/css">
+@font-face
+	{
+    	font-family: myFont1;
+    	src: url(鸿雷板书简体.ttf);
+	}
+html{
+		background-image:url(images/背景3.png);
+		background-size:100%;
+	    margin:0;
+}
+#box{
+	height: 100%;
+	width: 100%;
+	position: relative;
+}
+
+#bt {
+	position:absolute;
+	font-family:myFont1;
+	top:4%;
+	left:17%;
+	font-size:45px;
+	color:rgba(102,102,102,1);
+}
+
+#by {
+	position: absolute;
+	font-family:myFont1;
+	top: 55%;
+	left: 17%;
+	font-size:45px;
+	color:rgba(102,102,102,1);
+}
+	
+/*内容*/
+#t1{
+	position: absolute;
+	left: 12%;
+	top: 3%;
+	} 
+#t2{
+	position: absolute;
+	left: 12%;
+	top: 53.5%;
+	} 
+#tm{
+	position:absolute;
+	top:15%;
+	left:15%;
+	width:70%;
+	height:30%;
+	font-family:"幼圆";
+	color:#575757;
+	font-weight:bold;
+	border:2px dashed #575757;
+	}
+#tm h2{
+	font-size:24px;
+	margin:20px 20px 0 20px;
+	}
+#tm ul{
+	font-size:21px;
+	}
+#tj{
+	background-color:#ECC7C1;
+	border:0;
+	font-family:"幼圆";
+	color:#575757;
+	font-weight:bold;
+	height:30px;
+	width:65px;
+	font-size:21px;
+	border-radius:3px;
+	position:absolute;
+	left:48%;
+	top:75%;
+	}
+#an1{
+	position:absolute;
+	top:41%;
+	left:6%;
+}
+#an2{
+	position:absolute;
+	top:41%;
+	left:32%;
+}
+#an3{
+	position:absolute;
+	top:41%;
+	left:56%;
+}
+#an4{
+	position:absolute;
+	top:41%;
+	left:80%;
+}
+#cw1{
+	position:absolute;
+	top:35%;
+	left:2%;
+}
+#cw2{
+	position:absolute;
+	top:35%;;
+	left:52%;
+}
+#cw3{
+	position:absolute;
+	top:35%;;
+	left:76%;
+}
+#zq{
+	position:absolute;
+	top:35%;
+	left:28%;
+}
+#ts{
+	position:absolute;
+	top:57%;
+	left:40%;
+	font-size:21px;
+	color:#DD4A4C;
+}
+
+#tz{
+	position:absolute;
+	top:66%;
+	left:15%;
+	width:70%;
+	height:30%;
+	font-family:"幼圆";
+	color:#575757;
+	font-weight:bold;
+	line-height:25px;
+	border:2px dashed #575757
+	}
+#tz h2{
+	font-size:20px;
+	margin:20px 20px 0 20px;
+	}
+	
+/*内容*/
+#syy{
+	position:absolute;
+	height:61px;
+	top:45%;
+	left:4%;
+	}
+/*上一页*/
+#xyy{
+	position:absolute;
+	height:61px;
+	top:45%;
+	left:93%;
+	}
+/*下一页*/
+/*返回*/
+#fh{
+	position:absolute;
+	top:5%;
+	left:88%;
+	}
+/*返回*/
+.main{
+	position: absolute;
+	top:40%;
+	left:48%;
+	z-index:50;
+	}
+</style>
+<script type="text/javascript">
+function myFunction()
+{
+	var abc=document.myform.answer.value;
+ 
+	if(abc=="answer1")
+	{
+		document.getElementById("cw1").style.display = "block";
+		document.getElementById("cw2").style.display = "none";
+		document.getElementById("cw3").style.display = "none";
+		document.getElementById("zq").style.display = "none";
+		document.getElementById("ts").style.display = "none";
+		document.getElementById("tz").style.display = "block";
+	
+	}
+	else if(abc=="answer2")
+	{
+		document.getElementById("zq").style.display = "block";
+		document.getElementById("cw1").style.display = "none";
+		document.getElementById("cw2").style.display = "none";
+		document.getElementById("cw3").style.display = "none";
+		document.getElementById("ts").style.display = "none";
+		document.getElementById("tz").style.display = "block";
+	
+	}
+	else if(abc=="answer3")
+	{
+		document.getElementById("cw2").style.display = "block";
+		document.getElementById("cw1").style.display = "none";
+		document.getElementById("zq").style.display = "none";
+		document.getElementById("cw3").style.display = "none";
+		document.getElementById("ts").style.display = "none";
+		document.getElementById("tz").style.display = "block";
+	
+	}
+	else if(abc=="answer4")
+	{
+		document.getElementById("cw3").style.display = "block";
+		document.getElementById("cw1").style.display = "none";
+		document.getElementById("cw2").style.display = "none";
+		document.getElementById("zq").style.display = "none";
+		document.getElementById("ts").style.display = "none";
+		document.getElementById("tz").style.display = "block";
+	
+	}
+	else
+	{
+		document.getElementById("ts").style.display = "block";
+		document.getElementById("zq").style.display = "none";
+		document.getElementById("cw1").style.display = "none";
+		document.getElementById("cw2").style.display = "none";
+		document.getElementById("cw3").style.display = "none";
+		document.getElementById("tz").style.display = "none";
+	
+}
+}
+</script>
+
+</head>
+
+<body>
+<div class="main">
+		<a href="#wheel" class="wheel-button">☰</a>
+	    <ul id="wheel">
+            <li class="item"><a href="test4.html">5.</a></li>
+            <li class="item"><a href="test5.html">6.</a></li>
+            <li class="item"><a href="test6.html">7.</a></li>
+            <li class="item"><a href="test7.html">8.</a></li>    	    
+            <li class="item"><a href="test.html">1.</a></li>
+            <li class="item"><a href="test1.html">2.</a></li>
+            <li class="item"><a href="test2.html">3.</a></li>
+            <li class="item"><a href="test3.html">4.</a></li>      
+	    </ul>
+</div>
+	
+<div id="box">
+<div id="bt">♨温故</div>
+
+<!--内容-->
+
+
+<div id="tm">
+<h2>3&nbsp;.&nbsp;中国第一个有机场的县级城市是（）？</h2>
+<form action="" method="post" name="myform" id="myform">
+<ul style="list-style:none;">
+<li id="an1"><input type="radio" value="answer1" name="answer" />桐乡市</li>
+<li id="an2"><input type="radio" value="answer2" name="answer" />临海市</li>
+<li id="an3"><input type="radio" value="answer3" name="answer" />余姚市</li>
+<li id="an4"><input type="radio" value="answer4" name="answer" />义乌市</li>
+</ul>
+<input type="button" value="提交" name="submit" onClick="myFunction()" id="tj" >
+
+<img src="images/r65.png" width="50px" height="50px" id="cw1" style="display:none">
+<img src="images/r65.png" width="50px" height="50px" id="cw2" style="display:none">
+<img src="images/r69.png" width="50px" height="50px" id="cw3" style="display:none">
+<img src="images/r65.png" width="50px" height="50px" id="zq" style="display:none">
+<div id="ts" style="display:none">请勿提交，你还没有答题哦！</div>
+
+</form>
+</div>
+<div id="by">💡知新</div>
+ 
+<div id="tz" style="display:none">
+  <h2>&emsp;&emsp;正确答案：义乌市</br>&emsp;&emsp;义乌是目前全球最大的小商品集散中心。被联合国，世界银行等国际权威机构确定为世界第一大市场。义乌国际商贸城被国家旅游局授予中国首个AAAA级购物旅游区荣誉称号。义乌机场是一个位于浙江金华的民用机场，义乌市成为国内第一个有机场的县级市。义乌机场修建于1970年，原为海军训练二级机场，1988年经国务院、中央军委批准同意义乌机场军民合用。1991年4月民航通航，4月1日，民航站举行首航仪式，开通义乌—广州、厦门两条航线。</h2>
+</div>
+
+<!--内容-->
+<div id="syy">
+<a href="test1.html"><button class="btn btn-3 btn-3a icon-arrow-left"></button></a>
+</div>
+<div id="xyy">
+<a href="test3.html"><button class="btn btn-3 btn-3e icon-arrow-right"></button></a>
+</div>
+
+<!--返回-->
+<div id="fh">
+<a href="index.html"><button class="btn btn-6 btn-6l">↶首页</button></a>
+</div>
+<!--返回-->
+</div>
+	<script type="text/javascript">
+    	$(".wheel-button").wheelmenu({
+      		animation: "fly",
+      		animationSpeed: "medium"
+    	});
+  	</script>
+</body>
+</html>

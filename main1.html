@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<head>
+<meta charset="UTF-8">
+<title>浙江交通百年发展脉络——日新月异</title>
+<link rel="stylesheet" href="css/main.component.css"> 
+<link rel="stylesheet" type="text/css" href="css/main.index.css" />
+<style>
+    *,
+    *:after,
+    *:before {
+	    -webkit-box-sizing: border-box;
+	    -moz-box-sizing: border-box;
+	    box-sizing: border-box;
+    }
+
+    a{
+        text-decoration: none;
+    	font-size:24px;
+        outline: none;}
+    a:hover,a:focus{color:#74777b;};
+
+
+    .content {
+    	font-size: 150%;
+    	padding: 3em 0;
+    }
+
+    .content p {
+	    margin: 1em 0;
+        padding: 5em 0 0 0;
+    	font-size: 0.65em;
+    }
+	body {
+	  font-family: 'Open Sans';
+	  -webkit-font-smoothing: antialiased;
+	  text-rendering: geometricPrecision;
+	  line-height: 1.5;
+	  margin:0;
+	}
+	
+	h1 {
+	  font-weight: 500;
+	  text-shadow: #fff 3px 3px 2px;
+	}
+	* {
+	  box-sizing: border-box;
+	}
+	
+	.strips {
+	  height:700px;
+	  text-align: center;
+	  overflow: hidden;
+	  color: #000;
+	}
+	.strips__strip {
+	  will-change: width, left, z-index, height;
+	  height:100%;
+	  position: absolute;
+	  width: 20%;
+	  overflow: hidden;
+	  cursor: pointer;
+	  -webkit-transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+			  transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+	}
+	.strips__strip:nth-child(1) {
+	  left: 0;
+	}
+	.strips__strip:nth-child(2) {
+	  left: 20vw;
+	}
+	.strips__strip:nth-child(3) {
+	  left: 40vw;
+	}
+	.strips__strip:nth-child(4) {
+	  left: 60vw;
+	}
+	.strips__strip:nth-child(5) {
+	  left: 80vw;
+	}
+	.strips__strip:nth-child(1) .strip__content {
+	  background-image:url(images/飞机.png);
+	  background-position:right;
+	  background-size:1000px;
+	  -webkit-transform: translate3d(-100%, 0, 0);
+			  transform: translate3d(-100%, 0, 0);
+	  -webkit-animation-name: strip1;
+			  animation-name: strip1;
+	  -webkit-animation-delay: 0.1s;
+			  animation-delay: 0.1s;
+	}
+	.strips__strip:nth-child(2) .strip__content {
+	  background-image:url(images/渡船.png);
+	  background-position:right;
+	  background-size:1000px;
+	  -webkit-transform: translate3d(0, 100%, 0);
+			  transform: translate3d(0, 100%, 0);
+	  -webkit-animation-name: strip2;
+			  animation-name: strip2;
+	  -webkit-animation-delay: 0.2s;
+			  animation-delay: 0.2s;
+	}
+	.strips__strip:nth-child(3) .strip__content {
+      background-image:url(images/高铁.png);
+	  background-position:left;
+	  background-size:1000px;
+	  -webkit-transform: translate3d(0, -100%, 0);
+			  transform: translate3d(0, -100%, 0);
+	  -webkit-animation-name: strip3;
+			  animation-name: strip3;
+	  -webkit-animation-delay: 0.3s;
+			  animation-delay: 0.3s;
+	}
+	.strips__strip:nth-child(4) .strip__content {
+	  background-image:url(images/汽车.png);
+	  background-position:left;
+	  background-size:1000px;
+	  -webkit-transform: translate3d(0, 100%, 0);
+			  transform: translate3d(0, 100%, 0);
+	  -webkit-animation-name: strip4;
+			  animation-name: strip4;
+	  -webkit-animation-delay: 0.4s;
+			  animation-delay: 0.4s;
+	}
+	.strips__strip:nth-child(5) .strip__content {
+	  background-image:url(images/地铁.png);
+	  background-position:left;
+	  background-size:1000px;
+	  -webkit-transform: translate3d(100%, 0, 0);
+			  transform: translate3d(100%, 0, 0);
+	  -webkit-animation-name: strip5;
+			  animation-name: strip5;
+	  -webkit-animation-delay: 0.5s;
+			  animation-delay: 0.5s;
+	}
+	
+	.strips .strip__content {
+	  -webkit-animation-duration: 1s;
+			  animation-duration: 1s;
+	  -webkit-animation-timing-function: cubic-bezier(0.23, 1, 0.32, 1);
+			  animation-timing-function: cubic-bezier(0.23, 1, 0.32, 1);
+	  -webkit-animation-fill-mode: both;
+			  animation-fill-mode: both;
+	  display: -webkit-box;
+	  display: -webkit-flex;
+	  display: -ms-flexbox;
+	  display: flex;
+	  -webkit-box-align: center;
+	  -webkit-align-items: center;
+		  -ms-flex-align: center;
+			  align-items: center;
+	  -webkit-box-pack: center;
+	  -webkit-justify-content: center;
+		  -ms-flex-pack: center;
+			  justify-content: center;
+	  position: absolute;
+	  top: 0;
+	  left: 0;
+	  width: 100%;
+	  height: 100%;
+	  text-decoration: none;
+	}
+	.strips .strip__content:hover:before {
+	  -webkit-transform: skew(-30deg) scale(3) translate(0, 0);
+		  -ms-transform: skew(-30deg) scale(3) translate(0, 0);
+			  transform: skew(-30deg) scale(3) translate(0, 0);
+	  opacity: 0.1;
+	}
+	.strips .strip__content:before {
+	  content: "";
+	  position: absolute;
+	  z-index: 1;
+	  top: 0;
+	  left: 0;
+	  width: 100%;
+	  height: 100%;
+	  background: white;
+	  opacity: 0.05;
+	  -webkit-transform-origin: center center;
+		  -ms-transform-origin: center center;
+			  transform-origin: center center;
+	  -webkit-transform: skew(-30deg) scaleY(1) translate(0, 0);
+		  -ms-transform: skew(-30deg) scaleY(1) translate(0, 0);
+			  transform: skew(-30deg) scaleY(1) translate(0, 0);
+	  -webkit-transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+			  transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+	}
+	
+	.strip__title {
+	  display: block;
+	  margin: 0;
+	  position: relative;
+	  z-index: 2;
+	  width: 100%;
+	  font-size: 3.5vw;
+	  color: #000;
+	  -webkit-transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+			  transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+	}
+	
+	@keyframes strip1 {
+	  0% {
+		-webkit-transform: translate3d(-100%, 0, 0);
+				transform: translate3d(-100%, 0, 0);
+	  }
+	  100% {
+		-webkit-transform: translate3d(0, 0, 0);
+				transform: translate3d(0, 0, 0);
+	  }
+	}
+	
+	@keyframes strip2 {
+	  0% {
+		-webkit-transform: translate3d(0, 100%, 0);
+				transform: translate3d(0, 100%, 0);
+	  }
+	  100% {
+		-webkit-transform: translate3d(0, 0, 0);
+				transform: translate3d(0, 0, 0);
+	  }
+	}
+	
+	@keyframes strip3 {
+	  0% {
+		-webkit-transform: translate3d(0, -100%, 0);
+				transform: translate3d(0, -100%, 0);
+	  }
+	  100% {
+		-webkit-transform: translate3d(0, 0, 0);
+				transform: translate3d(0, 0, 0);
+	  }
+	}
+	
+	@keyframes strip4 {
+	  0% {
+		-webkit-transform: translate3d(0, 100%, 0);
+				transform: translate3d(0, 100%, 0);
+	  }
+	  100% {
+		-webkit-transform: translate3d(0, 0, 0);
+				transform: translate3d(0, 0, 0);
+	  }
+	}
+	
+	@keyframes strip5 {
+	  0% {
+		-webkit-transform: translate3d(100%, 0, 0);
+				transform: translate3d(100%, 0, 0);
+	  }
+	  100% {
+		-webkit-transform: translate3d(0, 0, 0);
+				transform: translate3d(0, 0, 0);
+	  }
+	}
+	#fh{
+	position:absolute;
+	top:3%;
+	left:2%;
+	}
+</style>
+</head>
+<body>
+<div class="container">
+	<section class="strips">
+    
+    
+	  <article class="strips__strip">
+	   <a href="airplane.html">
+        <div class="strip__content">
+	      <h1 class="strip__title">飞机</h1>
+	    </div>
+       </a>
+	  </article>
+      
+	  <article class="strips__strip">
+       <a href="ship.html">
+	    <div class="strip__content">
+	      <h1 class="strip__title">渡船</h1>
+	    </div>
+       </a>
+	  </article>
+      
+	  <article class="strips__strip">
+       <a href="train.html">
+	    <div class="strip__content">
+	      <h1 class="strip__title">高铁</h1>
+	    </div>
+       </a>
+	  </article>
+      
+	  <article class="strips__strip">
+       <a href="car.html">
+	    <div class="strip__content">
+	      <h1 class="strip__title">汽车</h1>
+	    </div>
+       </a>
+	  </article>
+      
+	  <article class="strips__strip">
+       <a href="subway.html">
+	    <div class="strip__content">
+	      <h1 class="strip__title">地铁</h1>
+	    </div>
+       </a>
+	  </article>
+	  <section class="cd-section">
+			<div class="cd-modal-action">
+				<a href="#0" class="btn" data-type="modal-trigger">前言</a>
+				<span class="cd-modal-bg"></span>
+			</div>
+
+			<div class="cd-modal">
+				<div class="cd-modal-content">
+					<p>今年是中国共产党成立100周年。100年来，人民群众的经济生活、交通出行等都发生了翻天覆地的变化。</p>
+
+					<p>如今，无论是铁路、公路、水路，还是车站、码头、机场，年轻的一代已经很难想象100年前的出行状态。历史的浪潮滚滚而来，刷新了交通工具的面貌，也刷新了人们的思想观念。交通，作为经济社会发展的先行官，一直以来先行先试、勇立潮头，奋力书写着美好生活的“交通篇章”，创造了跨越发展的“交通成就”。</p>
+
+					<p>初心不忘，使命在肩。为致敬中国共产党百年光辉历程，吹响全体浙江交通人在新时代不忘初心再出发的号角，重访重要地标、重温重要事件，寻找交通发展历史上的思想高地，感悟红色精神伟力，深入挖掘蕴含其中的丰富内涵和时代价值，全新梳理浙江各个地市的交通党史发展脉络，以展示浙江交通行业作为“三地一窗口”的政治担当。</p>
+				</div>
+			</div>
+
+			<a href="#0" class="cd-modal-close">Close</a>
+		</section>
+        <div id="fh">
+<a href="index.html"><button class="btn btn-6 btn-6l">↶首页</button></a>
+</div>
+        
+	</section>
+    
+        
+	</div>
+	
+	<script src="js/main.intro1.js"></script>
+	<script src="js/main.intro2.js"></script>
+	<script src="js/main.intro3.js"></script>
+	
+</body>
+</html>

@@ -1,0 +1,24 @@
+.btn-6 {
+	color: #fff;
+	background: rgba(0,0,0,0.7);
+	-webkit-transition: none;
+	-moz-transition: none;
+	transition: none;
+}
+
+.btn-6:active {
+	top: 2px;
+}
+
+/* Button 6l */
+.btn-6l {
+	padding:5px 10px 5px 10px;
+	border: 8px double rgba(0,0,0,0.7);
+	border-radius: 60px;
+}
+
+.btn-6l:hover {
+	background: white;
+	color:rgba(0,0,0,0.7);
+}
+

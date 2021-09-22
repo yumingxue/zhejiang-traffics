@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<head>
+<meta charset="UTF-8">
+<title>浙江交通百年发展脉络</title>
+
+<link rel="stylesheet" href="css/index.menu.css">
+  <style>
+  		html {
+		background-image:url(images/背景.png);
+		background-size:100%;
+		}
+		body {
+    		margin: 0;
+		}
+		.page-wrap {
+		  margin: 0 auto;
+		  width: 1300px;
+		  max-width: 100%;
+		  padding-top: 20px;
+		}
+
+		.toggle-function {
+		  position:relative;
+		  display: block;
+		  margin: 30px 0 30px 210px;
+		  width:186px;
+		}
+
+		.vfx-image-wrap {
+		  position: relative;
+		  right:20%;
+		  margin: 0 auto;
+		  width: 600px;
+		  min-height: 620px;
+		  margin-bottom: 40px;
+		  cursor: ew-resize;
+		}
+		.before-image {
+		  position: absolute;
+		  top: 40px;
+		  left: 0;
+		  z-index: 1;
+		  overflow: hidden;
+		}
+		.after-image {
+		  position: absolute;
+		  top: 40px;
+		  left: 0;
+		  z-index: 0;
+		}
+		.divider-bar {
+		  position: absolute;
+		  width: 2px;
+		  left: 50%;
+		  top: 30px;
+		  bottom: -15px;
+		  background: white;
+		  height: 100%;
+		  display: block;
+		  z-index: 2;
+		  box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.4);
+		}
+		section a {
+	  text-transform: uppercase;
+	  text-align: center;
+	  text-decoration: none;
+	  font-size: 70px;
+	  font-weight: bolder;
+	  color: #fff;
+	}
+	section a:after, section a:before {
+	  content: '';
+	}
+	section.title a {
+	  width: 550px;
+	  height: 78px;
+	  line-height: 78px;
+	  position: absolute;
+	  top: 30%;
+	  left: 55%;
+	  font-weight: 600;
+	  -webkit-text-stroke: 2px white;
+	  color: rgb(106,98,96);
+	  -webkit-transition: all 2s cubic-bezier(0.21, 1, 0.84, 1.01);
+	  -moz-transition: all 2s cubic-bezier(0.21, 1, 0.84, 1.01);
+	  transition: all 2s cubic-bezier(0.21, 1, 0.84, 1.01);
+	}
+	section.title a:before, section.title a:after {
+	  color: #BABABA;
+	  font-weight: 900;
+	  font-size: 30px;
+	  text-transform: none;
+	  display: block;
+	  -webkit-transition: inherit;
+	  -moz-transition: inherit;
+	  transition: inherit;
+	}
+	section.title a:before {
+	  content: attr(data-bf);
+	  position: absolute;
+	  top: -35px;
+	  left: 15px;
+	}
+	section.title a:after {
+	  content: attr(data-af);
+	  position: absolute;
+	  right: 0;
+	  bottom: -110px;
+	}
+	section.title a:hover {
+	  -webkit-transform: scale(1.05);
+	  -moz-transform: scale(1.05);
+	  -ms-transform: scale(1.05);
+	  -o-transform: scale(1.05);
+	  transform: scale(1.05);
+	}
+	section.title a:hover:before {
+	  -webkit-transform: scale(1.2) translate(-25px, -15px);
+	  -moz-transform: scale(1.2) translate(-25px, -15px);
+	  -ms-transform: scale(1.2) translate(-25px, -15px);
+	  -o-transform: scale(1.2) translate(-25px, -15px);
+	  transform: scale(1.2) translate(-25px, -15px);
+	}
+	section.title a:hover:after {
+	  -webkit-transform: scale(1.2) translate(25px, 15px);
+	  -moz-transform: scale(1.2) translate(25px, 15px);
+	  -ms-transform: scale(1.2) translate(25px, 15px);
+	  -o-transform: scale(1.2) translate(25px, 15px);
+	  transform: scale(1.2) translate(25px, 15px);
+	}
+	.BTN{
+		border: none;
+		font-family: inherit;
+		font-size: inherit;
+		color: inherit;
+		background: none;
+		cursor: pointer;
+		padding: 25px 80px;
+		display: inline-block;
+		text-transform: uppercase;
+		letter-spacing: 1px;
+		font-weight: 700;
+		outline: none;
+		position: relative;
+		-webkit-transition: all 0.3s;
+		-moz-transition: all 0.3s;
+		transition: all 0.3s;
+		top:320%;
+	}
+	.BTN:after {
+		content: '';
+		position: absolute;
+		z-index: -1;
+		-webkit-transition: all 0.3s;
+		-moz-transition: all 0.3s;
+		transition: all 0.3s;
+	}
+	.BTN-1c:after {
+		width: 0%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		background: #fff;
+	}
+	
+	.BTN-1c:hover,.BTN-1c:active {
+		color: rgb(225,161,140);
+	}
+	
+	.BTN-1c:hover:after,.BTN-1c:active:after {
+		width: 100%;
+	}
+
+		marquee {
+                font-weight: bolder;
+                font-size: 20px;
+                color: #6a6260;
+				width:600px;
+			   -webkit-text-stroke: 1px white;
+            }
+		.scroll{
+			position: absolute;
+			top:10%;
+			left:55%;
+		}
+	</style>
+
+    
+</head>
+
+<body>
+    
+    <section class="title">
+		<a href="" data-bf="Zhe Jiang" data-af="Jiao Tong">浙江交通<br>百年发展脉络</a>
+    <div class="next">
+    <a href="main1.html">
+    <button class="BTN BTN-1 BTN-1c"> ➢ ➢ ➢ </button>
+    </a>
+    </div>
+	</section>
+    
+  	<div class="page-wrap">
+    <div class="scroll">
+    <marquee behavior="scroll" onMouseOut="this.start()" onMouseOver="this.stop()">WELCOME！请将光标停留在左侧地图上的分割线处并左右挪动以查看百年前后变化！</marquee>
+    </div>
+       	<span class="toggle-function">
+	</div>
+    <div class="vfx-image-wrap">
+      	<div class="before-image">
+			<img src="images/VFX-before.jpg" alt="" width="600px" height="600px"/>
+     	 </div>
+     	<div class="after-image">
+			<img src="images/VFX-after.jpg" alt="" width="600px" height="600px"/>
+      	</div>
+      	<div class="divider-bar"></div>
+    </div>
+    </div>
+    <div class="fat-nav">
+        <div class="fat-nav__wrapper">
+            <ul>
+                <li><a href="main1.html">日新月异➠</a></li>
+                <li><a href="main2.html">在浙畅游➠</a></li>
+                <li><a href="test.html">温故知新➠</a></li>
+            </ul>
+        </div>
+    </div>
+    
+<script src='js/index.change1.js'></script>
+<script src="js/index.change2.js"></script>
+<script type="text/javascript" src="js/index.menu.js"></script>
+    <script>
+		(function() {
+		 $.fatNav();
+		}());
+    </script>
+
+	</body>
+</html>
